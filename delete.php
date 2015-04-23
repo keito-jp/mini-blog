@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
   $table = mysql_fetch_assoc($record);
   if ($table['member_id'] == $_SESSION['id']) {
     // さくじょ
-    mysql_query('DELETE FROM posts WHERE id=' . mysql_real_escape_string($id) . '') or die(mysql_error());
+    mysql_query('DELETE FROM posts WHERE id=' . mysql_real_escape_string($id)) or die(mysql_error());
   }
 }
 
